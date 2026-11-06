@@ -1,0 +1,22 @@
+{
+  "name": "tetes-desktop",
+  "version": "0.1.0",
+  "description": "Notch hidup di tepi atas layar: pengingat minum, timer fokus, to-do",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "dist": "electron-builder"
+  },
+  "devDependencies": {
+    "electron": "^32.2.0",
+    "electron-builder": "^25.1.8"
+  },
+  "build": {
+    "appId": "com.tetes.desktop",
+    "productName": "Tetes",
+    "files": ["main.js", "preload.js", "index.html", "style.css", "assets/**"],
+    "win": { "target": "nsis" },
+    "mac": { "target": "dmg", "category": "public.app-category.productivity" },
+    "linux": { "target": "AppImage", "category": "Utility" }
+  }
+}
